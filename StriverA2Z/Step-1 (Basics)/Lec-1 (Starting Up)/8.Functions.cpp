@@ -1,4 +1,4 @@
-// Code360: Nth Fibonacci Number (Easy)
+// GFG: Pass by Reference and Value (Easy)
 // link: https://www.geeksforgeeks.org/problems/pass-by-reference-and-value/1
 
 //{ Driver Code Starts
