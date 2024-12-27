@@ -1,4 +1,4 @@
-// Leetcode: 125 - Valid Palindrome (Easy)
+// Leetcode: 125. Valid Palindrome (Easy)
 // link: https://leetcode.com/problems/valid-palindrome/description/
 
 #include <bits/stdc++.h>

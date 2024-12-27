@@ -1,4 +1,4 @@
-// Leetcode: 509 - Fibonacci Number (Easy)
+// Leetcode: 509. Fibonacci Number (Easy)
 // link: https://leetcode.com/problems/fibonacci-number/
 
 #include <bits/stdc++.h>

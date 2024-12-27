@@ -1,4 +1,4 @@
-// Leetcode: 7 - Reverse Integer (Medium)
+// Leetcode: 7. Reverse Integer (Medium)
 // link: https://leetcode.com/problems/reverse-integer/description/
 
 #include <bits/stdc++.h>

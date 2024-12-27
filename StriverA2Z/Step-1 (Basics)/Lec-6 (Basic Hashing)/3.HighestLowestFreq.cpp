@@ -1,4 +1,4 @@
-// Leetcode: 1838 - Frequency of the Most Frequent Element (Medium)
+// Leetcode: 1838. Frequency of the Most Frequent Element (Medium)
 // link: https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/
 
 #include <bits/stdc++.h>

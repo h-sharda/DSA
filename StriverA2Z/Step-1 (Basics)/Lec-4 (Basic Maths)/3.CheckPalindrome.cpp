@@ -1,4 +1,4 @@
-// Leetcode: 9 - Palindrome Number (Easy)
+// Leetcode: 9. Palindrome Number (Easy)
 // link: https://leetcode.com/problems/palindrome-number/
 
 #include <bits/stdc++.h>
