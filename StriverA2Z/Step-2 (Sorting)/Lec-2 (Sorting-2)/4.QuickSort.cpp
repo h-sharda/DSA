@@ -28,8 +28,8 @@ void sort(vector<int>& v, int start, int end) {
     sort(v, pos+1, end);
 }
 
-void mergeSort(vector<int>& v, int n) {
-    sort(v, 0, n-1);
+void quickSort(vector<int>& v, int n) {
+    sort(v, 0, n-1);    
 }
 
 int main() {
@@ -44,7 +44,7 @@ int main() {
             cin >> v[i];
         }
         
-        mergeSort(v, n);
+        quickSort(v, n);
 
         for (int i = 0; i < v.size(); i++) cout << v[i] << " ";
         cout << endl;

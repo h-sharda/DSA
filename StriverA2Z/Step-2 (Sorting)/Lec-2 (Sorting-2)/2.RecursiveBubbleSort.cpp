@@ -7,8 +7,24 @@ void fast_io() {
     cout.tie(0);
 }
 
-void quickSort(vector<int>& v, int n) {
+void sort(vector<int> &v, int n, int j, bool swapped) {
+
+    if (j == n-1) {
+        if (!swapped) return;
+        j = 0, n--;
+    }
+    if ( n == 1 ) return;
+
+    if (v[j+1] < v[j]) {
+        swapped = true;
+        swap (v[j+1], v[j]);
+    }
     
+    sort(v, n, j+1, swapped);
+}
+
+void rBubbleSort(vector<int>& v, int n) {
+    sort (v, n, 0, false);
 }
 
 int main() {
@@ -23,7 +39,7 @@ int main() {
             cin >> v[i];
         }
         
-        quickSort(v, n);
+        rBubbleSort(v, n);
 
         for (int i = 0; i < v.size(); i++) cout << v[i] << " ";
         cout << endl;
