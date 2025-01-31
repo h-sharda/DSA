@@ -7,7 +7,7 @@ void fast_io() {
     cout.tie(0);
 }
 
-void sort(vector<int> &v, int n, int j, bool swapped) {
+void recurse(vector<int> &v, int n, int j, bool swapped) {
 
     if (j == n-1) {
         if (!swapped) return;
@@ -20,11 +20,11 @@ void sort(vector<int> &v, int n, int j, bool swapped) {
         swap (v[j+1], v[j]);
     }
     
-    sort(v, n, j+1, swapped);
+    recurse(v, n, j+1, swapped);
 }
 
 void rBubbleSort(vector<int>& v, int n) {
-    sort (v, n, 0, false);
+    recurse (v, n, 0, false);
 }
 
 int main() {
