@@ -1,5 +1,5 @@
-// Problem: 3330. Find the Original Typed String I (Easy)
-// Link: https://leetcode.com/problems/find-the-original-typed-string-i
+# Problem: 3330. Find the Original Typed String I (Easy)
+# Link: https://leetcode.com/problems/find-the-original-typed-string-i
 
 class Solution:
     def possibleStringCount(self, word: str) -> int:
