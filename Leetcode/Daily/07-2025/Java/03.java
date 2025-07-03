@@ -2,16 +2,19 @@
 // Link: https://leetcode.com/problems/find-the-k-th-character-in-string-game-i
 
 class Solution {
-    private void next(StringBuilder word) {
-        int n = word.length();
-        for (int i = 0; i < n; i++) word.append((char)((word.charAt(i) - 'a' + 1) % 26 + 'a'));
-    }
-
     public char kthCharacter(int k) {
-        StringBuilder word = new StringBuilder("a");
-        
-        while (word.length() < k) next(word);
-        
-        return word.charAt(k-1);
+        char ans = 'a';
+        int add = -1;
+        while ( k % 2 == 0 ) {
+            k /= 2;
+            add++;
+        }
+
+        while (k > 0) {
+            if ( k % 2 == 1) add++;
+            k /= 2;
+        }
+
+        return (char)(add % 26 + 'a');
     }
 }
