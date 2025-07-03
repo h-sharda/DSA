@@ -3,16 +3,15 @@
 
 class Solution {
 public:
-    void next(string &word) {
-        int n = word.size();
-        for (int i = 0; i < n; i++) word.push_back((word[i] - 'a' + 1) % 26 + 'a');
-    }
-
     char kthCharacter(int k) {
-        string word = "a";
-        
-        while (word.size() < k) next(word);
-        
-        return word[k-1];
+        char ans = 'a';
+        int add = -1;
+        while ( k % 2 == 0 ) k /= 2, add++;
+        while (k > 0) {
+            if ( k % 2 == 1) add++;
+            k /= 2;
+        }
+
+        return add % 26 + 'a';
     }
 };
