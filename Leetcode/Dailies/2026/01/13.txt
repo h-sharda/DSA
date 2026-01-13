@@ -1,0 +1,47 @@
+// Problem: 3453. Separate Squares I (Medium)
+// Link: https://leetcode.com/problems/separate-squares-i
+
+class Solution {
+public:
+    double separateSquares(vector<vector<int>>& squares) {
+        
+        int n = squares.size();
+        double low = 0, high = 2e9;
+
+        double ans = -1;
+        
+        while (high - low > 1e-6) {
+            double mid = (low + high)/2;
+
+            double upArea = 0;
+            double downArea = 0;
+
+            for (int i =0; i < n; i++ ) {
+                double x = squares[i][0], y = squares[i][1], l = squares[i][2];
+
+                double h1 = (y + l <= mid ? l : mid - y);
+                h1 = h1 < 0 ? 0 : h1;
+
+                double h2 = (y >= mid ? l : l + y - mid);
+                h2 = h2 < 0 ? 0 : h2;
+                
+                downArea += 1.0 * l * h1;
+                upArea += 1.0 * l * h2;
+            }
+            
+            // cout << mid << " " << upArea << " " << downArea << " " <<  endl;
+            
+            if ( fabs(upArea-downArea) < 1e-6) {
+                ans = mid;
+                high = mid;
+            } else if (upArea  > downArea) {
+                low = mid;
+            } else if (downArea > upArea) {
+                ans = mid;
+                high = mid;
+            }
+        }
+
+        return ans;
+    }
+};
